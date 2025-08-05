@@ -1,0 +1,73 @@
+<!-- COPY THIS EXACT HTML INTO YOUR FORM EDITOR -->
+<!-- This will fix the privacy policy link issue -->
+
+<script>
+// Fix form links to work with local development
+document.addEventListener('DOMContentLoaded', function() {
+  // Get current domain
+  const currentDomain = window.location.origin;
+
+  // Update all privacy policy links
+  const privacyLinks = document.querySelectorAll('a[href*="privacy-policy"]');
+  privacyLinks.forEach(link => {
+    link.href = currentDomain + '/privacy-policy';
+  });
+
+  // Update all terms of service links
+  const termsLinks = document.querySelectorAll('a[href*="terms-of-service"]');
+  termsLinks.forEach(link => {
+    link.href = currentDomain + '/terms-of-service';
+  });
+});
+</script>
+
+<div style="margin: 10px; font-size: 12px; color: #666; line-height: 1.4;">
+  <p style="margin: 5px 0;">
+    By submitting this form, you agree to our
+    <a href="/terms-of-service" target="_blank" rel="noopener noreferrer"
+       style="color: #0066cc; text-decoration: underline;">
+      Terms of Service
+    </a>
+    and
+    <a href="/privacy-policy" target="_blank" rel="noopener noreferrer"
+       style="color: #0066cc; text-decoration: underline;">
+      Privacy Policy
+    </a>.
+  </p>
+</div>
+
+<!-- Alternative version if you need absolute URLs for production: -->
+<!-- 
+<div style="margin: 10px; font-size: 12px; color: #666; line-height: 1.4;">
+  <p style="margin: 5px 0;">
+    By submitting this form, you agree to our 
+    <a href="http://localhost:5174/terms-of-service" target="_blank" rel="noopener noreferrer" 
+       style="color: #0066cc; text-decoration: underline;">
+      Terms of Service
+    </a> 
+    and 
+    <a href="http://localhost:5174/privacy-policy" target="_blank" rel="noopener noreferrer" 
+       style="color: #0066cc; text-decoration: underline;">
+      Privacy Policy
+    </a>.
+  </p>
+</div>
+-->
+
+<!-- For production deployment, use your actual domain: -->
+<!-- 
+<div style="margin: 10px; font-size: 12px; color: #666; line-height: 1.4;">
+  <p style="margin: 5px 0;">
+    By submitting this form, you agree to our 
+    <a href="https://yourdomain.com/terms-of-service" target="_blank" rel="noopener noreferrer" 
+       style="color: #0066cc; text-decoration: underline;">
+      Terms of Service
+    </a> 
+    and 
+    <a href="https://yourdomain.com/privacy-policy" target="_blank" rel="noopener noreferrer" 
+       style="color: #0066cc; text-decoration: underline;">
+      Privacy Policy
+    </a>.
+  </p>
+</div>
+-->
