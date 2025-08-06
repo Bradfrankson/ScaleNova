@@ -29,20 +29,38 @@
       margin: 0;
       padding: 40px;
       text-align: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .container {
       max-width: 600px;
       margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(1, 117, 194, 0.07);
+      padding: 32px 20px 28px 20px;
     }
 
     h1 {
       color: #0175C2;
+      font-size: 2rem;
+      margin-bottom: 0.5em;
     }
 
     p {
       font-size: 18px;
       margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #888;
+      margin-top: 8px;
+      margin-bottom: 0;
     }
 
     .btn {
@@ -53,6 +71,27 @@
       color: #fff;
       text-decoration: none;
       border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .btn:hover, .btn:focus {
+      background-color: #025a97;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 18px 6vw 18px 6vw;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+      p {
+        font-size: 16px;
+      }
+      .btn {
+        width: 100%;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -63,9 +102,10 @@
     src="https://www.facebook.com/tr?id=616367818177097&ev=PageView&noscript=1"/>
   </noscript>
   <div class="container">
-    <h1>✅ You're Booked!</h1>
-    <p>Thanks for scheduling your free strategy call.<br />You're one step closer to getting your custom website built!</p>
-    <a href="/" class="btn">Back to Home</a>
+    <h1>✅ Appointment Confirmed!</h1>
+    <p>Thanks for booking your free mold remediation consultation. A specialist will review your request and follow up shortly to confirm the details.</p>
+    <div class="note">We help homeowners remove harmful mold and restore safe indoor air quality fast.</div>
+    <a href="/" class="btn">Return to Homepage</a>
   </div>
 </body>
 </html>
