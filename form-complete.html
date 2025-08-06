@@ -1,0 +1,83 @@
+<!-- COMPLETE FORM HTML CODE -->
+<!-- Copy this ENTIRE code into your form editor -->
+
+<script>
+// Fix form links to work with your Vercel deployment
+document.addEventListener('DOMContentLoaded', function() {
+  // Your actual Vercel domain (update this to match your deployment URL)
+  const productionDomain = 'https://scalenova.vercel.app';
+  
+  // Update all privacy policy links
+  const privacyLinks = document.querySelectorAll('a[href*="privacy-policy"], a[href="/privacy-policy"]');
+  privacyLinks.forEach(link => {
+    link.href = productionDomain + '/privacy-policy';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
+
+  // Update all terms of service links
+  const termsLinks = document.querySelectorAll('a[href*="terms-of-service"], a[href="/terms-of-service"]');
+  termsLinks.forEach(link => {
+    link.href = productionDomain + '/terms-of-service';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
+
+  // Also fix any existing links that might be broken
+  setTimeout(() => {
+    const allLinks = document.querySelectorAll('a');
+    allLinks.forEach(link => {
+      if (link.href.includes('privacy-policy') && !link.href.includes(productionDomain)) {
+        link.href = productionDomain + '/privacy-policy';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
+      if (link.href.includes('terms-of-service') && !link.href.includes(productionDomain)) {
+        link.href = productionDomain + '/terms-of-service';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
+    });
+  }, 1000);
+});
+</script>
+
+<!-- Privacy Policy and Terms Links -->
+<div style="margin: 15px 0; padding: 10px; font-size: 12px; color: #666; line-height: 1.5; background-color: #f9f9f9; border-radius: 5px;">
+  <p style="margin: 0 0 8px 0; font-weight: 600;">
+    By submitting this form, you agree to our:
+  </p>
+  <p style="margin: 0;">
+    <a href="https://scalenova.vercel.app/terms-of-service" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       style="color: #0066cc; text-decoration: underline; margin-right: 15px;">
+      📄 Terms of Service
+    </a>
+    <a href="https://scalenova.vercel.app/privacy-policy" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       style="color: #0066cc; text-decoration: underline;">
+      🔒 Privacy Policy
+    </a>
+  </p>
+</div>
+
+<!-- Alternative version with buttons instead of links -->
+<!-- 
+<div style="margin: 15px 0; padding: 10px; text-align: center;">
+  <p style="margin: 0 0 10px 0; font-size: 12px; color: #666;">
+    By submitting this form, you agree to our policies:
+  </p>
+  <button type="button" 
+          onclick="window.open('https://scalenova.vercel.app/terms-of-service', '_blank')"
+          style="margin: 5px; padding: 8px 12px; background-color: #0066cc; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 11px;">
+    Terms of Service
+  </button>
+  <button type="button" 
+          onclick="window.open('https://scalenova.vercel.app/privacy-policy', '_blank')"
+          style="margin: 5px; padding: 8px 12px; background-color: #0066cc; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 11px;">
+    Privacy Policy
+  </button>
+</div>
+-->

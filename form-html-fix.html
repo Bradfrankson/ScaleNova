@@ -2,21 +2,25 @@
 <!-- This will fix the privacy policy link issue -->
 
 <script>
-// Fix form links to work with local development
+// Fix form links to work with production deployment
 document.addEventListener('DOMContentLoaded', function() {
-  // Get current domain
-  const currentDomain = window.location.origin;
+  // Use your actual Vercel domain
+  const productionDomain = 'https://scale-nova.vercel.app';
 
   // Update all privacy policy links
   const privacyLinks = document.querySelectorAll('a[href*="privacy-policy"]');
   privacyLinks.forEach(link => {
-    link.href = currentDomain + '/privacy-policy';
+    link.href = productionDomain + '/privacy-policy';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
   });
 
   // Update all terms of service links
   const termsLinks = document.querySelectorAll('a[href*="terms-of-service"]');
   termsLinks.forEach(link => {
-    link.href = currentDomain + '/terms-of-service';
+    link.href = productionDomain + '/terms-of-service';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
   });
 });
 </script>
@@ -24,12 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <div style="margin: 10px; font-size: 12px; color: #666; line-height: 1.4;">
   <p style="margin: 5px 0;">
     By submitting this form, you agree to our
-    <a href="/terms-of-service" target="_blank" rel="noopener noreferrer"
+    <a href="https://scale-nova.vercel.app/terms-of-service" target="_blank" rel="noopener noreferrer"
        style="color: #0066cc; text-decoration: underline;">
       Terms of Service
     </a>
     and
-    <a href="/privacy-policy" target="_blank" rel="noopener noreferrer"
+    <a href="https://scale-nova.vercel.app/privacy-policy" target="_blank" rel="noopener noreferrer"
        style="color: #0066cc; text-decoration: underline;">
       Privacy Policy
     </a>.
