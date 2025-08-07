@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Play, CheckCircle, Star, Phone, ArrowRight } from 'lucide-react';
 import Header from './Header';
 
@@ -7,6 +7,23 @@ interface VSLPageProps {
 }
 
 export default function VSLPage({ onCTAClick }: VSLPageProps) {
+  useEffect(() => {
+    // Load the calendar embed script
+    const script = document.createElement('script');
+    script.src = 'https://link.msgsndr.com/js/form_embed.js';
+    script.type = 'text/javascript';
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       <Header onBookInspection={onCTAClick} />
@@ -62,36 +79,59 @@ export default function VSLPage({ onCTAClick }: VSLPageProps) {
 
 
 
-      {/* Lead Generation Form Section */}
-      <section className="py-8 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0A1F44] mb-4">
-              We'll Reach Out to You
+      {/* Calendar Booking Section */}
+      <section className="py-12 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1F44] mb-4">
+              📅 Book Your Free Demo Now
             </h2>
-            <p className="text-gray-600">
-              Fill out the form below and our team will contact you within 24 hours to schedule your personalized demo.
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Schedule your personalized consultation and discover how we can generate 100+ exclusive mold leads for your business.
             </p>
           </div>
-          
-          <div className="bg-gray-50 rounded-xl p-6">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/form/2BgvHCHwuU3YUrlOCYzk"
-              style={{width:'100%', height:'770px', border:'none', borderRadius:'3px'}}
-              id="inline-2BgvHCHwuU3YUrlOCYzk" 
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Mold"
-              data-height="770"
-              data-layout-iframe-id="inline-2BgvHCHwuU3YUrlOCYzk"
-              data-form-id="2BgvHCHwuU3YUrlOCYzk"
-              title="Mold"
-            />
+
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+            <div className="bg-gradient-to-r from-[#0A1F44] to-[#1565C0] p-6 text-center">
+              <h3 className="text-xl font-semibold text-white mb-2">
+                🚀 Free Strategy Session
+              </h3>
+              <p className="text-gray-200 text-sm">
+                No commitment • 30-minute consultation • Immediate value
+              </p>
+            </div>
+
+            <div className="p-6">
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/booking/taZKX2Va4UV95RVhYHBB"
+                style={{
+                  width: '100%',
+                  height: '600px',
+                  border: 'none',
+                  borderRadius: '8px'
+                }}
+                scrolling="no"
+                id="taZKX2Va4UV95RVhYHBB_1754543731869"
+                title="Book Your Free Demo"
+              />
+            </div>
+
+            <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
+              <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-600">
+                <div className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  No sales pressure
+                </div>
+                <div className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Instant calendar access
+                </div>
+                <div className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Expert consultation
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
