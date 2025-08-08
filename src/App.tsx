@@ -32,7 +32,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<VSLPageWrapper />} />
-        {/* <Route path="/thank-you" element={<ThankYouPage />} /> */}
+        <Route path="/thank-you" element={<ThankYouPage />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
