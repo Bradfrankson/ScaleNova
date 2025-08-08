@@ -40,9 +40,6 @@ export default function ThankYouPage() {
           <h2 className="text-3xl font-bold text-yellow-400 mb-4">
             Step 1: Watch This Video Before Your Call
           </h2>
-          <p className="text-gray-300 text-lg">
-            What we will cover in this video:
-          </p>
         </div>
         
         <div className="bg-gray-800 rounded-2xl p-6 shadow-2xl">
