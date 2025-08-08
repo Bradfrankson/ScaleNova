@@ -7,9 +7,13 @@ export default function ThankYouPage() {
     // Set page title
     document.title = 'Thank You - Scale Nova Demo Booked';
 
-    // Track Facebook Pixel event for thank you page
+    // Track Facebook Pixel events for thank you page
     if (typeof window !== 'undefined' && (window as any).fbq) {
       (window as any).fbq('track', 'Lead');
+      (window as any).fbq('track', 'CompleteRegistration', {
+        content_name: 'demo_booking_confirmed',
+        status: 'confirmed'
+      });
     }
   }, []);
 
