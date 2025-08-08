@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CheckCircle, Play, Calendar, Users, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ThankYouPage() {
+  useEffect(() => {
+    // Set page title
+    document.title = 'Thank You - Scale Nova Demo Booked';
+
+    // Track Facebook Pixel event for thank you page
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead');
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
       {/* Header */}
@@ -36,7 +46,6 @@ export default function ThankYouPage() {
             className="w-full rounded-xl"
             controls
             preload="metadata"
-            poster="/Thank You.mp4"
           >
             <source src="/Thank You.mp4" type="video/mp4" />
             <div className="w-full h-64 bg-gray-700 rounded-xl flex items-center justify-center">
@@ -155,7 +164,7 @@ export default function ThankYouPage() {
           {/* Video 3 */}
           <div className="bg-gray-800 rounded-2xl p-6 shadow-xl">
             <h3 className="text-yellow-400 font-bold mb-4 text-lg">
-              What Makes Our Service Different?
+              Why Our Leads Are 100% Exclusive to You
             </h3>
             <video
               className="w-full rounded-xl mb-4"
@@ -167,9 +176,7 @@ export default function ThankYouPage() {
                 <Play className="w-8 h-8 text-yellow-400" />
               </div>
             </video>
-            <p className="text-gray-300 text-sm">
-              Learn about our exclusive lead generation process and why mold remediation companies choose us over competitors.
-            </p>
+
           </div>
         </div>
       </div>
