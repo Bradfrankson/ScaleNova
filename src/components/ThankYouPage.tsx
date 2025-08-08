@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { CheckCircle, Play, Calendar, Users, Shield } from 'lucide-react';
+import { useEffect } from 'react';
+import { CheckCircle, Play, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ThankYouPage() {
@@ -136,9 +136,7 @@ export default function ThankYouPage() {
                 <Play className="w-8 h-8 text-yellow-400" />
               </div>
             </video>
-            <p className="text-gray-300 text-sm">
-              Whether you want a few leads a week or want to scale aggressively, this short video explains how we match your pace.
-            </p>
+
           </div>
 
           {/* Video 2 */}
@@ -156,9 +154,7 @@ export default function ThankYouPage() {
                 <Play className="w-8 h-8 text-yellow-400" />
               </div>
             </video>
-            <p className="text-gray-300 text-sm">
-              We don't send leads to 3–5 companies like others. You get exclusive leads, in your region only.
-            </p>
+
           </div>
 
           {/* Video 3 */}
