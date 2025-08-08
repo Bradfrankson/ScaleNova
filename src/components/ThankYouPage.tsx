@@ -50,6 +50,7 @@ export default function ThankYouPage() {
             className="w-full rounded-xl"
             controls
             preload="metadata"
+            poster="/Thank You.mp4#t=0.1"
           >
             <source src="/Thank You.mp4" type="video/mp4" />
             <div className="w-full h-64 bg-gray-700 rounded-xl flex items-center justify-center">
@@ -134,6 +135,7 @@ export default function ThankYouPage() {
               className="w-full rounded-xl mb-4"
               controls
               preload="metadata"
+              poster="/Volume.mp4#t=0.1"
             >
               <source src="/Volume.mp4" type="video/mp4" />
               <div className="w-full h-40 bg-gray-700 rounded-xl flex items-center justify-center">
@@ -152,6 +154,7 @@ export default function ThankYouPage() {
               className="w-full rounded-xl mb-4"
               controls
               preload="metadata"
+              poster="/Generate leads how.mp4#t=0.1"
             >
               <source src="/Generate leads how.mp4" type="video/mp4" />
               <div className="w-full h-40 bg-gray-700 rounded-xl flex items-center justify-center">
@@ -170,6 +173,7 @@ export default function ThankYouPage() {
               className="w-full rounded-xl mb-4"
               controls
               preload="metadata"
+              poster="/Exclusive.mp4#t=0.1"
             >
               <source src="/Exclusive.mp4" type="video/mp4" />
               <div className="w-full h-40 bg-gray-700 rounded-xl flex items-center justify-center">
