@@ -45,7 +45,6 @@ export default function VSLPage({ onCTAClick }: VSLPageProps) {
                 style={{ aspectRatio: '9/16' }}
                 controls
                 preload="metadata"
-                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='640' viewBox='0 0 360 640'%3E%3Crect width='360' height='640' fill='%23000000'/%3E%3Ccircle cx='180' cy='320' r='40' fill='%23C7EA4D'/%3E%3Cpolygon points='170,300 170,340 200,320' fill='%230A1F44'/%3E%3C/svg%3E"
               >
                 <source src="/demo-video.mp4" type="video/mp4" />
                 <div className="w-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center" style={{ aspectRatio: '9/16' }}>

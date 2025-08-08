@@ -46,20 +46,19 @@ export default function ThankYouPage() {
         </div>
         
         <div className="bg-gray-800 rounded-2xl p-6 shadow-2xl">
-          <video
-            className="w-full rounded-xl"
-            controls
-            preload="metadata"
-            poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23374151'/%3E%3Ccircle cx='400' cy='225' r='50' fill='%23FCD34D'/%3E%3Cpolygon points='380,200 380,250 430,225' fill='%23111827'/%3E%3C/svg%3E"
-          >
-            <source src="/Thank You.mp4" type="video/mp4" />
-            <div className="w-full h-64 bg-gray-700 rounded-xl flex items-center justify-center">
-              <div className="text-center">
-                <Play className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
-                <p className="text-gray-300">Your browser does not support the video tag.</p>
-              </div>
-            </div>
-          </video>
+          <div className="relative aspect-video">
+            <video
+              className="w-full h-full rounded-xl"
+              controls
+              preload="metadata"
+              playsInline
+              poster="/demo-video.mp4"
+              autoPlay
+            >
+              <source src="/Thank You.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
 
@@ -131,17 +130,18 @@ export default function ThankYouPage() {
             <h3 className="text-yellow-400 font-bold mb-4 text-lg">
               Can You Handle the Volume – or Want to Start Slow?
             </h3>
-            <video
-              className="w-full rounded-xl mb-4"
-              controls
-              preload="metadata"
-              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23374151'/%3E%3Ccircle cx='200' cy='112.5' r='30' fill='%23FCD34D'/%3E%3Cpolygon points='190,100 190,125 210,112.5' fill='%23111827'/%3E%3C/svg%3E"
-            >
-              <source src="/Volume.mp4" type="video/mp4" />
-              <div className="w-full h-40 bg-gray-700 rounded-xl flex items-center justify-center">
-                <Play className="w-8 h-8 text-yellow-400" />
-              </div>
-            </video>
+            <div className="relative aspect-video mb-4">
+              <video
+                className="w-full h-full rounded-xl"
+                controls
+                preload="metadata"
+                playsInline
+                autoPlay
+              >
+                <source src="/Volume.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
           </div>
 
@@ -150,17 +150,18 @@ export default function ThankYouPage() {
             <h3 className="text-yellow-400 font-bold mb-4 text-lg">
               How We Generate Your Leads?
             </h3>
-            <video
-              className="w-full rounded-xl mb-4"
-              controls
-              preload="metadata"
-              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23374151'/%3E%3Ccircle cx='200' cy='112.5' r='30' fill='%23FCD34D'/%3E%3Cpolygon points='190,100 190,125 210,112.5' fill='%23111827'/%3E%3C/svg%3E"
-            >
-              <source src="/Generate leads how.mp4" type="video/mp4" />
-              <div className="w-full h-40 bg-gray-700 rounded-xl flex items-center justify-center">
-                <Play className="w-8 h-8 text-yellow-400" />
-              </div>
-            </video>
+            <div className="relative aspect-video mb-4">
+              <video
+                className="w-full h-full rounded-xl"
+                controls
+                preload="metadata"
+                playsInline
+                autoPlay
+              >
+                <source src="/Generate leads how.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
           </div>
 
@@ -169,17 +170,18 @@ export default function ThankYouPage() {
             <h3 className="text-yellow-400 font-bold mb-4 text-lg">
               Why Our Leads Are 100% Exclusive to You?
             </h3>
-            <video
-              className="w-full rounded-xl mb-4"
-              controls
-              preload="metadata"
-              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23374151'/%3E%3Ccircle cx='200' cy='112.5' r='30' fill='%23FCD34D'/%3E%3Cpolygon points='190,100 190,125 210,112.5' fill='%23111827'/%3E%3C/svg%3E"
-            >
-              <source src="/Exclusive.mp4" type="video/mp4" />
-              <div className="w-full h-40 bg-gray-700 rounded-xl flex items-center justify-center">
-                <Play className="w-8 h-8 text-yellow-400" />
-              </div>
-            </video>
+            <div className="relative aspect-video mb-4">
+              <video
+                className="w-full h-full rounded-xl"
+                controls
+                preload="metadata"
+                playsInline
+                autoPlay
+              >
+                <source src="/Exclusive.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
           </div>
         </div>
