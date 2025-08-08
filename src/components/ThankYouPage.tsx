@@ -142,7 +142,7 @@ export default function ThankYouPage() {
           {/* Video 2 */}
           <div className="bg-gray-800 rounded-2xl p-6 shadow-xl">
             <h3 className="text-yellow-400 font-bold mb-4 text-lg">
-              How We Generate Your Leads (And Why They're Exclusive)
+              How We Generate Your Leads?
             </h3>
             <video
               className="w-full rounded-xl mb-4"
@@ -160,7 +160,7 @@ export default function ThankYouPage() {
           {/* Video 3 */}
           <div className="bg-gray-800 rounded-2xl p-6 shadow-xl">
             <h3 className="text-yellow-400 font-bold mb-4 text-lg">
-              Why Our Leads Are 100% Exclusive to You
+              Why Our Leads Are 100% Exclusive to You?
             </h3>
             <video
               className="w-full rounded-xl mb-4"
