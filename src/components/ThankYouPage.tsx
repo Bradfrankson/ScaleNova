@@ -52,7 +52,6 @@ export default function ThankYouPage() {
               controls
               preload="metadata"
               playsInline
-              poster="/demo-video.mp4"
               autoPlay
             >
               <source src="/Thank You.mp4" type="video/mp4" />
@@ -136,7 +135,6 @@ export default function ThankYouPage() {
                 controls
                 preload="metadata"
                 playsInline
-                poster="/Volume.mp4"
                 autoPlay
               >
                 <source src="/Volume.mp4" type="video/mp4" />
@@ -157,7 +155,6 @@ export default function ThankYouPage() {
                 controls
                 preload="metadata"
                 playsInline
-                poster="/Generate leads how.mp4"
                 autoPlay
               >
                 <source src="/Generate leads how.mp4" type="video/mp4" />
@@ -178,7 +175,6 @@ export default function ThankYouPage() {
                 controls
                 preload="metadata"
                 playsInline
-                poster="/Exclusive.mp4"
                 autoPlay
               >
                 <source src="/Exclusive.mp4" type="video/mp4" />
